@@ -32,5 +32,9 @@ namespace Com.Jschiff.UnityExtensions {
         public static Vector3 ScreenYInvert(this Vector3 vector) {
             return new Vector3(vector.x, Screen.height - vector.y, 0);
         }
+
+        public static Color WithA(this Color color, float a) {
+            return new Color(color.r, color.g, color.b, a);
+        }
     }
 }
