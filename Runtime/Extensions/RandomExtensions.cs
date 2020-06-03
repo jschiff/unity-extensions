@@ -5,7 +5,7 @@ using UnityEngine;
 using Random = System.Random;
 
 
-namespace Com.Jschiff.UnityExtensions.Extensions {
+namespace Com.Jschiff.UnityExtensions {
     /// <summary>
     /// Some extension methods for <see cref="Random"/> for creating a few more kinds of random stuff.
     /// </summary>

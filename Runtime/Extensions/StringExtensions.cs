@@ -1,4 +1,4 @@
-﻿namespace Com.Jschiff.UnityExtensions.Extensions {
+﻿namespace Com.Jschiff.UnityExtensions {
     public static class StringExtensions {
         public static string TrimWhitespaceQuickly(this string str) {
             var len = str.Length;

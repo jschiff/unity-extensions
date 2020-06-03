@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
-using Com.Jschiff.UnityExtensions.Extensions;
 
 namespace Com.Jschiff.UnityExtensions.Utilities {
 

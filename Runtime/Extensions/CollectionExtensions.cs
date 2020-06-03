@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Random = UnityEngine.Random;
 
-namespace Com.Jschiff.UnityExtensions.Extensions {
+namespace Com.Jschiff.UnityExtensions {
     public static class CollectionExtensions {
         private static readonly Dictionary<Type, object> emptyLists = new Dictionary<Type, object>();
 

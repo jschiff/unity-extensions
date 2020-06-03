@@ -2,9 +2,9 @@
 using System;
 using System.Text;
 using System.Linq;
-using Com.Jschiff.UnityExtensions.Extensions;
+using Com.Jschiff.UnityExtensions;
 
-// A prefix tree for searching goods! Case insensitive
+// A case-insensitive prefix tree.
 public class PrefixTree<T> where T : class {
     private class Node {
         internal readonly string expansion;

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Com.Jschiff.UnityExtensions.Extensions {
+namespace Com.Jschiff.UnityExtensions {
     public static class VectorExtensions {
         public static Vector2 WithX(this Vector2 v, float x) {
             v.x = x;

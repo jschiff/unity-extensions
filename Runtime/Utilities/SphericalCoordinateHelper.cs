@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Com.Jschiff.UnityExtensions.Extensions;
 
 namespace Com.Jschiff.UnityExtensions.Utilities {
     // We reuse Vector3 for polar coordinates, with x = θ, y = φ, z = r
