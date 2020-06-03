@@ -54,7 +54,7 @@ namespace Com.Jschiff.UnityExtensions {
         }
 
         public static void Shuffle<T>(this IList<T> list) {
-            for (int i = list.Count; i > 0; i--) {
+            for (int i = list.Count - 1; i > 0; i--) {
                 int rnd = Random.Range(0, i);
 
                 // Swap
