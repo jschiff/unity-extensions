@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "displayName": "JSchiff Extensions",
   "description": "Handy extension methods and utility classes to make Unity easier to work with",
-  "unity": "2018.3",
+  "unity": "2019.4",
   "dependencies": {
-    "com.unity.addressables": "1.1.10"
+    "com.unity.addressables": "1.1.10",
+    "com.unity.textmeshpro": "2.1.1"
   },
   "keywords": [
     "extensions",
