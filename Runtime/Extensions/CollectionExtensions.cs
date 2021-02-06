@@ -23,6 +23,7 @@ namespace Com.Jschiff.UnityExtensions {
             if (dict.TryGetValue(key, out V value)) {
                 V newVal = fun(key, value);
                 dict[key] = newVal;
+                return newVal;
             }
             else {
                 V v = default;
