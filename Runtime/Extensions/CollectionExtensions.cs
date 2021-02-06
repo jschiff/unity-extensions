@@ -20,7 +20,7 @@ namespace Com.Jschiff.UnityExtensions {
         }
         
         public static V Compute<K, V>(this Dictionary<K, V> dict, K key, Func<K, V, V> fun) {
-            if (dict.TryGetValue(key, out V value) {
+            if (dict.TryGetValue(key, out V value)) {
                 V newVal = fun(key, value);
                 dict[key] = newVal;
             }
