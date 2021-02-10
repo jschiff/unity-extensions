@@ -18,6 +18,20 @@ namespace Com.Jschiff.UnityExtensions {
         public static TValue GetValueOrDefault<TKey, TValue> (this IDictionary<TKey, TValue> dictionary, TKey key, TValue defaultValue) {
             return dictionary.TryGetValue(key, out TValue value) ? value : defaultValue;
         }
+        
+        public static V Compute<K, V>(this Dictionary<K, V> dict, K key, Func<K, V, V> fun) {
+            if (dict.TryGetValue(key, out V value)) {
+                V newVal = fun(key, value);
+                dict[key] = newVal;
+                return newVal;
+            }
+            else {
+                V v = default;
+                v = fun(key, v);
+                dict[key] = v;
+                return v;
+            }
+        }
 
         public static V ComputeIfAbsent<K, V>(this Dictionary<K, V> dict, K key, Func<V> newInstanceFunction) {
             if (dict.TryGetValue(key, out V value)) {
