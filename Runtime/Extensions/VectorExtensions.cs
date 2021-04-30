@@ -10,7 +10,7 @@ namespace Com.Jschiff.UnityExtensions {
             v.y = y;
             return v;
         }
-        public static Vector2 WithZ(this Vector2 v, float z) {
+        public static Vector3 WithZ(this Vector2 v, float z) {
             Vector3 v3 = v;
             v3.z = z;
             return v3;
