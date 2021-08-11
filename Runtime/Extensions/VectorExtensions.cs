@@ -28,20 +28,18 @@ namespace Com.Jschiff.UnityExtensions {
             v.z = z;
             return v;
         }
-        
-        public static Vector3 Hadamard(this Vector3 a, Vector3 b) {
-            return new Vector3(
-                a.x * b.x,
-                a.y * b.y,
-                a.z * b.z
-            );
+
+        public static Vector3 Clamp(this Vector3 v, Vector3 min, Vector3 max) {
+            v.x = v.x < min.x ? min.x : v.x > max.x ? max.x : v.x;
+            v.y = v.y < min.y ? min.y : v.y > max.y ? max.y : v.y;
+            v.z = v.z < min.z ? min.z : v.z > max.z ? max.z : v.z;
+            return v;
         }
-        
-        public static Vector2 Hadamard(this Vector2 a, Vector2 b) {
-            return new Vector2(
-                a.x * b.x,
-                a.y * b.y
-            );
+
+        public static Vector2 Clamp(this Vector2 v, Vector2 min, Vector2 max) {
+            v.x = v.x < min.x ? min.x : v.x > max.x ? max.x : v.x;
+            v.y = v.y < min.y ? min.y : v.y > max.y ? max.y : v.y;
+            return v;
         }
 
         public static Vector3 ScreenYInvert(this Vector3 vector) {
