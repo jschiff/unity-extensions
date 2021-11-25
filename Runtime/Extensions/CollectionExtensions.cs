@@ -67,14 +67,23 @@ namespace Com.Jschiff.UnityExtensions {
             return list[randomIndex];
         }
 
-        public static void Shuffle<T>(this IList<T> list) {
-            for (int i = list.Count - 1; i > 0; i--) {
-                int rnd = Random.Range(0, i);
+        static void Shuffle<T>(this T[] array) {
+            int n = array.Length;
+            for (int i = 0; i < (n - 1); i++) {
+                int r = i + Random.Range(0, n - i);
+                T t = array[r];
+                array[r] = array[i];
+                array[i] = t;
+            }
+        }
 
-                // Swap
-                T temp = list[i];
-                list[i] = list[rnd];
-                list[rnd] = temp;
+        public static void Shuffle<T>(this IList<T> list) {
+            int n = list.Count;
+            for (int i = 0; i < (n - 1); i++) {
+                int r = i + Random.Range(0, n - i);
+                T t = list[r];
+                list[r] = list[i];
+                list[i] = t;
             }
         }
     }
