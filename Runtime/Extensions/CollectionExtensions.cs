@@ -33,6 +33,17 @@ namespace Com.Jschiff.UnityExtensions {
             }
         }
 
+        public static V ComputeIfAbsent<K, V>(this Dictionary<K, V> dict, K key, Func<K, V> newInstanceFunction) {
+            if (dict.TryGetValue(key, out V value)) {
+                return value;
+            }
+            else {
+                var instance = newInstanceFunction(key);
+                dict[key] = instance;
+                return instance;
+            }
+        }
+
         public static V ComputeIfAbsent<K, V>(this Dictionary<K, V> dict, K key, Func<V> newInstanceFunction) {
             if (dict.TryGetValue(key, out V value)) {
                 return value;
